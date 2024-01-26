@@ -3,6 +3,7 @@ import './KeypadButton.css'
 
 function KeyPad(props) {
   const keys = [
+   
     {
       keyCode: 55,
       label: "7",
@@ -51,10 +52,14 @@ function KeyPad(props) {
       keyCode: 13,
       label: "=",
     },
+    
   ];
+
+ 
 
 
   const symbols = [
+    
     {
       label: "⌫",
       keyCode: 8,
@@ -62,7 +67,7 @@ function KeyPad(props) {
     },
     {
       label: "÷",
-      keyCode: 111,
+      keyCode: 191,
       value: "/",
     },
     {
@@ -72,13 +77,17 @@ function KeyPad(props) {
     },
     {
       label: "﹣",
-      keyCode: 109,
+      keyCode: 189,
       value: "-",
     },
     {
       label: "+",
-      keyCode: 107,
+      keyCode: 187,
       value: "+",
+    },
+    {
+      keyCode: 67, // ASCII code for 'C'
+      label: "AC",
     },
   ];
 

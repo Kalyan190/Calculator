@@ -6,12 +6,14 @@
 .container{
   --bg-color-1:#9db3ed;
   --bg-color-2:#f9f9f9;
+  --bg-color-3:#dae9ea;
   --text-color-1:#0b1537;
   --text-color-2:#636363;
 }
 .container[data-theme = "dark"]{
   --bg-color-1:#172d67;
   --bg-color-2:#050c26;
+  --bg-color-3:#e10b96;
   --text-color-1:#fbfcfc;
   --text-color-2:#bbbcbc;
 }
@@ -33,9 +35,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #2a6c84;
+  background: var(--bg-color-3);
   min-height: 100vh;
 }
+
+
 .calculator{
   height: 500px;
   width: 280px;
@@ -52,7 +56,7 @@
   left: 0;
   background-color: transparent;
   min-height: 40px;
-  width: 100%;
+  width: 37%;
   padding: 10px;
   overflow: hidden;
   display: flex;
@@ -62,6 +66,8 @@
 .navbar img{
   height: 30px;
   width: 30px;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .navbar_button{
@@ -70,13 +76,14 @@
   border-radius: 20px;
   box-shadow: 1px 1px 40px 80px rgba(0,0,0,0.14);
   cursor: pointer;
+  background: #fff;
 }
 
 .toggle_circle{
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #0b1aef;
   transition: 300ms;
 
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
-import Bright from './Images/brightness.png';
-import Dark from './Images/light.png';
+import Bright from './Images/bright.png';
+import Dark from './Images/night-mode.png';
 import Show_Input_Out from './components/Show_Input_Out';
 import KeyPad from './components/KeyPad';
 
@@ -26,6 +26,15 @@ const App = () => {
 
 
   const handleKeyPress = (keyCode, key) => {
+    console.log(keyCode,key);
+
+    if (key === "AC" || keyCode === 67) {
+      setExpression("");
+      setResult("");
+      setHistory([]);
+      return;
+    }
+
     if (!keyCode) return;
     if (!usedKeyCodes.includes(keyCode)) return;
 
@@ -85,8 +94,8 @@ const App = () => {
   },[history])
 
   return (
-    <div className='container' data-theme={isDark?"dark":""} tabIndex="0" onKeyDown={(event)=>handleKeyPress(event.keycode,event.key)}>
-       <div className='calculator'>
+    <div className='container' data-theme={isDark?"dark":""} tabIndex="0" onKeyDown={(event)=>handleKeyPress(event.keyCode,event.key)} >
+       <div className='calculator' >
        <div className='navbar'>
        <div className='navbar_button' onClick={()=>setDark(!isDark)}>
            <div className={`toggle_circle ${isDark ? "toggle_circle_active" : ""} `}></div>
