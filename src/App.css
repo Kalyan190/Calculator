@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2a6c84;
   min-height: 100vh;
+}
+.calculator{
+  height: 500px;
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 1px -1px 20px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  min-height: 40px;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+}
+.navbar img{
+  height: 30px;
+  width: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar_button{
+  height: 15px;
+  width: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 40px 80px rgba(0,0,0,0.14);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle_circle{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 300ms;
+
+}
+.toggle_circle_active{
+  margin-left: 15px;
 }

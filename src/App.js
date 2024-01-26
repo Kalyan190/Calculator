@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import Bright from './Images/brightness.png';
+import Dark from './Images/light.png';
+import Show_Input_Out from './components/Show_Input_Out';
+import KeyPad from './components/KeyPad';
 
-function App() {
+
+const App = () => {
+   
+  const [isDark,setDark] = useState(false);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+       <div className='calculator'>
+       <div className='navbar'>
+       <div className='navbar_button' onClick={()=>setDark(!isDark)}>
+           <div className={`toggle_circle ${isDark ? "toggle_circle_active" : ""} `}></div>
+           
+       </div>
+       <img src={isDark ? Dark : Bright} alt='Mode'></img>
+       </div>
+
+        <Show_Input_Out/>
+        <KeyPad/>
+       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
